@@ -123,3 +123,9 @@ casper-client query-state --node-address http://localhost:11101 \
 --state-root-hash db571073ea3c42f311b95b85b010025d9d8368de0527ab7d3d061cb8d436dbd8 \
 --key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0 -q "counter"
 ```
+Or get even more specific with:
+```
+casper-client query-state --node-address http://localhost:11101 \
+--state-root-hash db571073ea3c42f311b95b85b010025d9d8368de0527ab7d3d061cb8d436dbd8 \
+--key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0 -q "counter/count"
+```
