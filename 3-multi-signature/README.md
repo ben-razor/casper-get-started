@@ -20,3 +20,13 @@ We follow the same process as previous examples to build the contract. Enabling 
 
 ### Keys Manager Client
 
+The keys manager client is a web interface to communicate with the contract.
+
+Configuration is stored in a .env file:
+
+```
+BASE_KEY_PATH=/media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/
+NODE_URL=http://localhost:11101/rpc
+```
+
+Additional configuration options are available: WASM_PATH, NETWORK_NAME, FUND_AMOUNT, PAYMENT_AMOUNT, TRANSFER_AMOUNT. These are set to default values in this example.
