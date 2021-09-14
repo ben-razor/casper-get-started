@@ -1,22 +1,18 @@
 # casper-get-started
 
+Step 1 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitcoin-hackathon/29/100026611) from the Casper Hackathon.
+
+> Create and deploy a simple, smart contract with cargo casper and cargo test
+
 ### 1. Rust Installation
 
-### 2. Rust Nightly
-
-### 3. Rust Version
-
-### 4. Check CMake Version
-
-It says to get the most recent version but I've stuck with the latest version for my OS.
-
-### 5. Install cargo-casper
+### 2. Install cargo-casper
 
 Install cargo-casper this will be used to create a simple contract, a runtime environment and a testing framework with a simple test.
 
-### 6. Create new project
+### 3. Create new project
 
-### 7. Sync cargo-casper with nightly
+### 4. Sync cargo-casper with nightly
 
 Got the following error:
 ```
@@ -25,17 +21,17 @@ error: component download failed for rustc-x86_64-unknown-linux-gnu: could not r
 Needed to do:
 ```rustup component add cargo```
 
-### 8. Add wasm target
+### 5. Add wasm target
 
 Got error:
 
-### 9. Build the contract
+### 6. Build the contract
 
 error: failed to select a version for the requirement `casper-contract = "^1.3.3"`
 
 Updated Cargo to use 1.3.2 instead.
 
-### 10. Test the contract
+### 7. Test the contract
 
 error: failed to select a version for the requirement `casper-contract = "^1.3.3"`
 error: failed to select a version for the requirement `casper-engine-test-support = "^1.3.3"`
@@ -62,7 +58,7 @@ failures:
 
 test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
 
-### Diagnosis of errors
+### 8. Diagnosis of errors
 
 It looks like target/wasm32-unknown-unknown should be copied under the tests folder but there is only tests/target/debug.
 
@@ -70,7 +66,7 @@ I'll try manually copying the wasm32-unknown-unknown out of release into tests.
 
 I realised the error was that I had come out of the contract directory and gone into the tests director and was running cargo test from there.
 
-### Tests Passing
+### 9. Tests Passing
 
 
 
