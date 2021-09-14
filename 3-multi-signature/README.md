@@ -43,3 +43,9 @@ As part of its operation, the Keys Manager deploys the contract that was created
     let deploy = keyManager.keys.buildContractInstallDeploy(mainAccount);
     await keyManager.sendDeploy(deploy, [mainAccount]);
 ```
+
+**The combined weights of the keys must beat the action_threshold in order for specific actions to be carried out on an account**
+```JavaScript
+deploy = utils.transferDeploy(mainAccount, firstAccount, 1);
+await utils.sendDeploy(deploy, [firstAccount, secondAccount]);  // Works as the deployment threshold is 1 and the keys combined weight is 2
+```
