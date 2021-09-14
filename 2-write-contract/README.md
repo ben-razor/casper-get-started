@@ -107,5 +107,19 @@ casper-client put-deploy \
 ```
 This produced a depoloy hash that was used to get information about the deployed contract:
 ```
-casper-client get-deploy --node-address http://localhost:11101 8cee321f32d307ca34bd576822c6e064b12dab0c6dab0eeb68c28ce9296d3ce9
+casper-client get-deploy \
+  --node-address http://localhost:11101 8cee321f32d307ca34bd576822c6e064b12dab0c6dab0eeb68c28ce9296d3ce9
+```
+
+### Query Contract Abilities
+
+**Remember to get a new State Root Hash after each update**
+```
+casper-client get-state-root-hash --node-address http://localhost:11101
+```
+Then a query parameter can be used to return detailed information about each contract:
+```
+casper-client query-state --node-address http://localhost:11101 \
+--state-root-hash db571073ea3c42f311b95b85b010025d9d8368de0527ab7d3d061cb8d436dbd8 \
+--key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0 -q "counter"
 ```
