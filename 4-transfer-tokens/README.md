@@ -58,7 +58,7 @@ error: The following required arguments were not provided:
     <--payment-amount <AMOUNT>|--payment-path <PATH>|--payment-package-hash <HEX STRING>|
     --payment-package-name <NAME>|--payment-hash <HEX STRING>|--payment-name <NAME>|--show-arg-examples>
 ```
-The command needed to be updated to add the --payment-amount parameter and use casper-net-1 instead of casper test as written in the [Transfer Workflow Document](https://docs.casperlabs.io/en/latest/workflow/transfer-workflow.html)
+The command needed to be updated to add the **--payment-amount** parameter and use **casper-net-1** instead of casper test as written in the [Transfer Workflow Document](https://docs.casperlabs.io/en/latest/workflow/transfer-workflow.html)
 ```
 casper-client transfer --amount 250000000000 --chain-name casper-net-1 \
   --node-address http://localhost:11101 \
