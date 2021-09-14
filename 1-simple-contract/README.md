@@ -82,4 +82,4 @@ I changed to the contract directory and ran cargo test and now the tests pass.
 
 ### 9. Tests Passing
 
-https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/14-cargo-tests-pass.png
+![Tests Pass](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/14-cargo-tests-pass.png)
