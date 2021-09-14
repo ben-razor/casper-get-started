@@ -112,3 +112,36 @@ casper-client get-balance --node-address http://localhost:11101 \
 ```
 
 The balance for the faucet account is now **999999999999999999999749999990000** Showing that the funds and fees have been removed from the source account.
+
+### Full Transaction Details
+To polish things off we use the following command to retrieve the full transaction information:
+```
+casper-client query-state --node-address http://localhost:11101  --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 --key transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
+```
+Giving the transaction details:
+```
+{
+  "id": -9036218191416929373,
+  "jsonrpc": "2.0",
+  "result": {
+    "api_version": "1.0.0",
+    "merkle_proof": "[1622 hex chars]",
+    "stored_value": {
+      "Transfer": {
+        "amount": "250000000000",
+        "deploy_hash": "af19e964025d42a86480738dfd4665c5adef0a4fcc1a06916ffef75175d0714c",
+        "from": "account-hash-d710e0c1efce64365eca1765fce7121b366c7a2d4d87317c7d2c8cd89503df2a",
+        "gas": "0",
+        "id": 123456789012345,
+        "source": "uref-261ec7b1b7206934e34611ce798454b17e62b39f5bf01796dd5d64288a75611c-007",
+        "target": "uref-91870dc6bd83afc6f3176f79549a733eb70e58561db87a5614c7952c868cd6b2-004",
+        "to": "account-hash-d1004404c841b7c2c2d64a172075d8d45591fb5328ee105b5ced58cdc853dc72"
+      }
+    }
+  }
+}
+
+```
+
+### Task Screenshots
+A selection of screenshots taken during this task:
