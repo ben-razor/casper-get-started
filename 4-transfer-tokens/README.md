@@ -47,13 +47,21 @@ casper-client transfer \
     --chain-name casper-test \
     --target-account 013284d8980fcc528649edf7e9fb67760dc4533252ad60ec62a7c657b13527a01c
 ```
-The command fails with the error:
+**The command fails with the error:**
 ```
-
+error: The following required arguments were not provided:
+    <--payment-amount <AMOUNT>|--payment-path <PATH>|--payment-package-hash <HEX STRING>|--payment-package-name <NAME>|--payment-hash <HEX STRING>|--payment-name <NAME>|--show-arg-examples>
 ```
 
 The command needed to be updated to add the --payment-amount parameter and use casper-net-1 instead of casper test as written in the [Transfer Workflow Document](https://docs.casperlabs.io/en/latest/workflow/transfer-workflow.html)
 ```
 casper-client transfer --amount 250000000000 --chain-name casper-net-1 --node-address http://localhost:11101 --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem --target-account 013284d8980fcc528649edf7e9fb67760dc4533252ad60ec62a7c657b13527a01c --transfer-id 123456789012345 --payment-amount 10000
 ```
-
+We then view the second account with:
+```
+casper-client get-balance --node-address http://localhost:11101 --purse-uref uref-91870dc6bd83afc6f3176f79549a733eb70e58561db87a5614c7952c868cd6b2-007 --state-root-hash 46f21a364ad9cdab20e831e9963d0a9ebe788372c541840b451a5f2ac090e946
+```
+The balance for the second account is now:
+```
+"balance_value": "1000000000000000000000250000000000"
+```
