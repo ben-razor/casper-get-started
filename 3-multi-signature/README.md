@@ -50,3 +50,11 @@ deploy = utils.transferDeploy(mainAccount, firstAccount, 1);
 // Works as the deployment threshold is 1 and the keys combined weight is 2
 await utils.sendDeploy(deploy, [firstAccount, secondAccount]); 
 ```
+
+### Additional Scenarios
+
+There are a number of [different scenarios](https://docs.casperlabs.io/en/latest/dapp-dev-guide/tutorials/multi-sig/examples.html) that 
+can be implemented when using multiple keys.
+
+To extend this example we will implement **Scenario 1: signing transactions with a single key**.
+
