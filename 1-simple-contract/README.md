@@ -6,24 +6,34 @@ Step 1 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 ### 1. Rust Installation
 
+![Rust installed](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/3-rust-version.png)
+
 ### 2. Install cargo-casper
 
 Install cargo-casper this will be used to create a simple contract, a runtime environment and a testing framework with a simple test.
 
+![cargo-casper Installed](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/5-cargo-casper.png)
+
 ### 3. Create new project
+
+![Create Project](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/6-create-project.png)
 
 ### 4. Sync cargo-casper with nightly
 
 Got the following error:
-```
+```bash
 error: component download failed for rustc-x86_64-unknown-linux-gnu: could not rename downloaded file from '/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161.partial' to '/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161'
 ```
 Needed to do:
 ```rustup component add cargo```
 
+![cargo-casper run](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/10-cargo-casper-installed.png)
+
 ### 5. Add wasm target
 
-Got error:
+Casper runs contracts in wasm so we need to add the wasm target to Rust:
+
+![Add wasm target](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/11-install-wasm-target.png)
 
 ### 6. Build the contract
 
@@ -31,12 +41,14 @@ error: failed to select a version for the requirement `casper-contract = "^1.3.3
 
 Updated Cargo to use 1.3.2 instead.
 
+![Cargo build complete](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/13-cargo-build-complete.png)
+
 ### 7. Test the contract
 
 error: failed to select a version for the requirement `casper-contract = "^1.3.3"`
 error: failed to select a version for the requirement `casper-engine-test-support = "^1.3.3"`
 
-Updated Cargo to use 1.3.2 for both of these.
+Updated Cargo to use 1.3.2 to solve these two issues.
 
 Then got errors:
 
@@ -64,7 +76,10 @@ It looks like target/wasm32-unknown-unknown should be copied under the tests fol
 
 I'll try manually copying the wasm32-unknown-unknown out of release into tests.
 
-I realised the error was that I had come out of the contract directory and gone into the tests director and was running cargo test from there.
+I realised the error was that I had come out of the contract directory and gone into the tests directory and was running cargo test from there.
+
+I changed to the contract directory and ran cargo test and now the tests pass.
 
 ### 9. Tests Passing
 
+https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/14-cargo-tests-pass.png
