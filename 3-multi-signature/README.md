@@ -4,6 +4,8 @@ Step 3 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 > Demonstrate key management concepts by modifying the client in the Multi-Sig tutorial to address one of the additional scenarios
 
+Screenshots from during the task are included at the bottom of this document.
+
 ### Keys Manager Contract
 
 To find out more about keys we work through the [Keys Manager Tutorial](https://docs.casperlabs.io/en/latest/dapp-dev-guide/tutorials/multi-sig/contract.html).
