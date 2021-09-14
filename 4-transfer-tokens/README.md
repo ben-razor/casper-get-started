@@ -76,6 +76,7 @@ casper-client get-balance --node-address http://localhost:11101 \
   --purse-uref uref-91870dc6bd83afc6f3176f79549a733eb70e58561db87a5614c7952c868cd6b2-007 
   --state-root-hash 46f21a364ad9cdab20e831e9963d0a9ebe788372c541840b451a5f2ac090e946
 ```
+### Transfer Completed
 The balance for the second account is now:
 ```
 "balance_value": "1000000000000000000000250000000000"
