@@ -4,6 +4,8 @@ Step 4 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 > Learn to transfer tokens to an account on the Casper Testnet.
 
+Screenshots from during the task are included at the bottom of this document.
+
 ### Transfer Accounts
 
 In this task we follow [Transfer Workflow](https://docs.casperlabs.io/en/latest/workflow/transfer-workflow.html) section of the Casper Documentation.
