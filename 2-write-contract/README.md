@@ -65,16 +65,20 @@ cargo +nightly-2021-06-17 install casper-client --locked
 
 Now we can use casper-client to interact with the local node.
 
-### Connter Contract
+### Account / Node Configuration
 
 An account is needed to interact with the contracts. Details for a local test account are produced by **nctl-view-faucet-account**
 
+```
 Account hash: account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0
 Secret key: casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem
+```
 
 We also need a *State Root Hash* for the server using **casper-client get-state-root-hash --node-address http://localhost:11101**
 
+```
 State root hash: cbfa15f64ca8689978c8b6b9cc05cc990b68cd62e3c8d1eb961effc8d8e420eb
+```
 
 These are used to query the state of the local node:
 
@@ -84,4 +88,24 @@ casper-client query-state --node-address http://localhost:11101 \
     --key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0
 ```
 
+### Deploying Contracts
 
+First compile to wasm using:
+
+```
+make prepare
+make test
+```
+Then deploy with:
+```
+casper-client put-deploy \
+    --node-address http://localhost:11101 \
+    --chain-name casper-net-1 \
+    --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem \
+    --payment-amount 5000000000000 \
+    --session-path ./counter/target/wasm32-unknown-unknown/release/counter-define.wasm
+```
+This produced a depoloy hash that was used to get information about the deployed contract:
+```
+casper-client get-deploy --node-address http://localhost:11101 8cee321f32d307ca34bd576822c6e064b12dab0c6dab0eeb68c28ce9296d3ce9
+```
