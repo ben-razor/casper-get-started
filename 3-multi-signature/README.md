@@ -56,5 +56,76 @@ await utils.sendDeploy(deploy, [firstAccount, secondAccount]);
 There are a number of [different scenarios](https://docs.casperlabs.io/en/latest/dapp-dev-guide/tutorials/multi-sig/examples.html) that 
 can be implemented when using multiple keys.
 
-To extend this example we will implement **Scenario 1: signing transactions with a single key**.
+To extend this example we will implement **Scenario 4: managing lost or stolen keys**.
 
+To implement this example we made the following changes to scenario-atomic.js:
+
+```JavaScript
+const keyManager = require('./key-manager');
+const TRANSFER_AMOUNT = process.env.TRANSFER_AMOUNT || 2500000000;
+
+(async function () {
+
+    // In this example, we set up 3 keys. A "browser" key (main), "mobile" key,
+    // and "safe" key
+    //
+    // Safe can do deployment and management on its own.
+    // Browser + Mobile can be used to deploy, but can't manage accounts without Safe
+    
+    // To achive the task, we will:
+    // 1. Set Keys Management Threshold to 3.
+    // 2. Set Deploy Threshold to 2.
+    // 3. Set main (browser), and mobile weight to 1
+    // 4. Set Safe key weight to 3 
+    // 4. Make a transfer from mainAccount to secondAccount using first & second accounts.
+    // 
+    // 1, 2, 3 will be done in one step.
+
+    const masterKey = keyManager.randomMasterKey();
+    const mainAccount = masterKey.deriveIndex(1);
+    const firstAccount = masterKey.deriveIndex(2);
+    const secondAccount = masterKey.deriveIndex(3);
+
+    console.log("Main account: " + mainAccount.publicKey.toHex());
+    console.log("First account: " + firstAccount.publicKey.toHex());
+    console.log("Second account: " + secondAccount.publicKey.toHex());
+
+    console.log("\n[x] Funding main account.");
+    await keyManager.fundAccount(mainAccount);
+    await keyManager.printAccount(mainAccount);
+
+    console.log("\n[x] Install Keys Manager contract");
+    let deploy = keyManager.keys.buildContractInstallDeploy(mainAccount);
+    await keyManager.sendDeploy(deploy, [mainAccount]);
+    await keyManager.printAccount(mainAccount);
+
+    // Deploy threshold is 2 out of 4
+    const deployThereshold = 2;
+    // Key Managment threshold is 3 out of 4
+    const keyManagementThreshold = 3;
+    // Every account weight is set to 1
+    const accounts = [
+        { publicKey: mainAccount.publicKey, weight: 1 },
+        { publicKey: firstAccount.publicKey, weight: 1 }, 
+        { publicKey: secondAccount.publicKey, weight: 3 }, 
+    ];
+
+    console.log("\n[x] Update keys deploy.");
+    deploy = keyManager.keys.setAll(mainAccount, deployThereshold, keyManagementThreshold, accounts);
+    await keyManager.sendDeploy(deploy, [mainAccount]);
+    await keyManager.printAccount(mainAccount);
+
+    console.log("\n[x] Make transfer.");
+    deploy = keyManager.transferDeploy(mainAccount, secondAccount, TRANSFER_AMOUNT);
+    await keyManager.sendDeploy(deploy, [firstAccount, secondAccount]);
+    await keyManager.printAccount(mainAccount);
+})();
+```
+Adding the following to package.json:
+```
+"scripts": {
+    ...
+    "start:lost-stolen": "node -r dotenv/config ./src/scenario-lost-stolen.js",
+    ...
+}
+```
