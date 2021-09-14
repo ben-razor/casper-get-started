@@ -157,3 +157,4 @@ Gave the deploy_hash:
 ```
 270cf989db8884ff1012635c55c879f9311edb46a612b8f91ea5baebb4603d17
 ```
+After getting a new **state-root-hash** and rerunning **query-state**. The CLValue has incremented by the deployment of this new contract.
