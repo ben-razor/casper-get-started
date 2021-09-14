@@ -129,3 +129,17 @@ casper-client query-state --node-address http://localhost:11101 \
 --state-root-hash db571073ea3c42f311b95b85b010025d9d8368de0527ab7d3d061cb8d436dbd8 \
 --key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0 -q "counter/count"
 ```
+
+### Interact With Contract
+Use **put-deploy** with **session-name** and **session-entry-point** to interact with the contract.
+```
+casper-client put-deploy \
+    --node-address http://localhost:11101 \
+    --chain-name casper-net-1 \
+    --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem \
+    --payment-amount 5000000000000 \
+    --session-name "counter" \
+    --session-entry-point "counter_inc"
+```
+Then after getting a new **state-root-hash**, rerun **query-state**. The CLValue has now changed.
+
