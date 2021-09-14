@@ -64,3 +64,24 @@ cargo +nightly-2021-06-17 install casper-client --locked
 ```
 
 Now we can use casper-client to interact with the local node.
+
+### Connter Contract
+
+An account is needed to interact with the contracts. Details for a local test account are produced by **nctl-view-faucet-account**
+
+Account hash: account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0
+Secret key: casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem
+
+We also need a *State Root Hash* for the server using **casper-client get-state-root-hash --node-address http://localhost:11101**
+
+State root hash: cbfa15f64ca8689978c8b6b9cc05cc990b68cd62e3c8d1eb961effc8d8e420eb
+
+These are used to query the state of the local node:
+
+```
+casper-client query-state --node-address http://localhost:11101 \
+    --state-root-hash cbfa15f64ca8689978c8b6b9cc05cc990b68cd62e3c8d1eb961effc8d8e420eb \
+    --key account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0
+```
+
+
