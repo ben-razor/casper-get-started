@@ -145,3 +145,11 @@ Giving the transaction details:
 
 ### Task Screenshots
 A selection of screenshots taken during this task:
+#### Transfer Error
+![1-transfer-error.png](https://github.com/ben-razor/casper-get-started/blob/main/4-transfer-tokens/img-task-4/1-transfer-error.png)
+#### Transfer Success
+![3-transfer-success.png](https://github.com/ben-razor/casper-get-started/blob/main/4-transfer-tokens/img-task-4/3-transfer-success.png)
+#### Target Balance Updated
+![4-target-balance-updated.png](https://github.com/ben-razor/casper-get-started/blob/main/4-transfer-tokens/img-task-4/4-target-balance-updated.png)
+#### Completed Transaction Details
+![5-transaction-details.png](https://github.com/ben-razor/casper-get-started/blob/main/4-transfer-tokens/img-task-4/5-transaction-details.png)
