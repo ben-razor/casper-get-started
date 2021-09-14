@@ -81,3 +81,17 @@ The balance for the second account is now:
 ```
 "balance_value": "1000000000000000000000250000000000"
 ```
+
+### Querying Transaction State
+We use get-deploy with returned deploy_hash to query the state of the transaction:
+```
+casper-client get-deploy --node-address http://localhost:11101 af19e964025d42a86480738dfd4665c5adef0a4fcc1a06916ffef75175d0714c
+```
+We use the information returned to gather the important information from the transaction:
+```
+# "result"."execution_results"[0]."transfers[0]"
+transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
+
+# "result"."execution_results"[0]."block_hash"
+528e275ea3fd2410fb2e7ab860739bdec57e26e638e0f6e46e9cb19a7f797776
+```
