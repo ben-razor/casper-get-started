@@ -96,7 +96,8 @@ transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
 ### Querying Block State
 We get the block information using:
 ```
-casper-client get-block --node-address http://localhost:11101 --block-identifier 528e275ea3fd2410fb2e7ab860739bdec57e26e638e0f6e46e9cb19a7f797776
+casper-client get-block --node-address http://localhost:11101 \
+  --block-identifier 528e275ea3fd2410fb2e7ab860739bdec57e26e638e0f6e46e9cb19a7f797776
 ```
 ### Querying Source Account
 We have already queried the destination account. But for completeness we query the source account to make sure the transaction has completed on both sides:
