@@ -101,9 +101,13 @@ casper-client get-block --node-address http://localhost:11101 --block-identifier
 ### Querying Source Account
 We have already queried the destination account. But for completeness we query the source account to make sure the transaction has completed on both sides:
 ```
-casper-client query-state --node-address http://localhost:11101 --key 0132263f5134d3d69026ec4575fecca26ba362266acfbb979cfc2c536bafa34a6e --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8
+casper-client query-state --node-address http://localhost:11101 \
+  --key 0132263f5134d3d69026ec4575fecca26ba362266acfbb979cfc2c536bafa34a6e 
+  --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8
 
-casper-client get-balance --node-address http://localhost:11101 --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 --purse-uref uref-261ec7b1b7206934e34611ce798454b17e62b39f5bf01796dd5d64288a75611c-00
+casper-client get-balance --node-address http://localhost:11101 \
+  --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 
+  --purse-uref uref-261ec7b1b7206934e34611ce798454b17e62b39f5bf01796dd5d64288a75611c-00
 ```
 
 The balance for the faucet account is now **999999999999999999999749999990000** Showing that the funds and fees have been removed from the source account.
