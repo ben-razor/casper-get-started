@@ -163,3 +163,9 @@ The following output was produced by the script, confirming that lost or stolen 
   actionThresholds: { deployment: 2, keyManagement: 3 }
 }
 ```
+### Task Screenshots
+A selection of screenshots taken during this task:
+#### Output from tutorial script
+![task-3-atomic-output.png](https://github.com/ben-razor/casper-get-started/blob/main/3-multi-signature/img-task-3/task-3-atomic-output.png)
+#### Output from Additional Scenario
+![task-3-output-1.png](https://github.com/ben-razor/casper-get-started/blob/main/3-multi-signature/img-task-3/task-3-output-1.png)
