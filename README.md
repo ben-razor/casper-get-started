@@ -8,3 +8,5 @@ This repository documents following [Get started with Casper](https://gitcoin.co
 
 ### 2. Complete a tutorial for writing a smart contract
 
+[Following the Counter Tutorial](https://github.com/ben-razor/casper-get-started/tree/main/2-write-contract)
+
