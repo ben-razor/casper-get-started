@@ -143,3 +143,17 @@ casper-client put-deploy \
 ```
 Then after getting a new **state-root-hash**, rerun **query-state**. The CLValue has now changed.
 
+### The counter-call Contract
+
+```
+casper-client put-deploy --node-address http://localhost:11101   \
+  --chain-name casper-net-1  \
+  --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem \
+  --payment-amount 5000000000000 --session-path ./counter/target/wasm32-unknown-unknown/release/counter-call.wasm
+```
+
+Gave the deploy_hash:
+
+```
+270cf989db8884ff1012635c55c879f9311edb46a612b8f91ea5baebb4603d17
+```
