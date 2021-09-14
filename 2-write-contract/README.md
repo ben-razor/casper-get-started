@@ -111,7 +111,7 @@ casper-client put-deploy \
     --payment-amount 5000000000000 \
     --session-path ./counter/target/wasm32-unknown-unknown/release/counter-define.wasm
 ```
-This produced a depoloy hash that was used to get information about the deployed contract:
+This produced a deploy hash that was used to get information about the deployed contract:
 ```
 casper-client get-deploy \
   --node-address http://localhost:11101 8cee321f32d307ca34bd576822c6e064b12dab0c6dab0eeb68c28ce9296d3ce9
