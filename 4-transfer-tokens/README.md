@@ -44,7 +44,16 @@ casper-client transfer \
     --node-address http://localhost:11101 \
     --amount 1000000000 \
     --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem \
-    --chain-name casper \
+    --chain-name casper-test \
     --target-account 013284d8980fcc528649edf7e9fb67760dc4533252ad60ec62a7c657b13527a01c
+```
+The command fails with the error:
+```
+
+```
+
+The command needed to be updated to add the --payment-amount parameter and use casper-net-1 instead of casper test as written in the [Transfer Workflow Document](https://docs.casperlabs.io/en/latest/workflow/transfer-workflow.html)
+```
+casper-client transfer --amount 250000000000 --chain-name casper-net-1 --node-address http://localhost:11101 --secret-key /media/chrisb/crypto1/local_node/casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem --target-account 013284d8980fcc528649edf7e9fb67760dc4533252ad60ec62a7c657b13527a01c --transfer-id 123456789012345 --payment-amount 10000
 ```
 
