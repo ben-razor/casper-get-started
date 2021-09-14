@@ -129,3 +129,37 @@ Adding the following to package.json:
     ...
 }
 ```
+
+The following output was produced by the script, confirming that lost or stolen key configuration was set up:
+
+```
+{
+  _accountHash: 'account-hash-c4f07b3a5489486df5db9d4aa29416c56b1e864bbe69b6c57c6f2c3d60ef7784',
+  namedKeys: [
+    {
+      name: 'keys_manager',
+      key: 'hash-cfb307cd5be2c3034582117740b1bdd0feea0970479ffb9f6cdd39322f22ff0f'
+    },
+    {
+      name: 'keys_manager_hash',
+      key: 'uref-a92ab850d14ce90ff7eb0ff43b0d5f958e67f5c461367384a54a204039e252f5-007'
+    }
+  ],
+  mainPurse: 'uref-5b4790b244d066087a42c57c8ed033d4fea59e05a5676d5561c7efa5d8fdc0a4-007',
+  associatedKeys: [
+    {
+      accountHash: 'account-hash-14f851d3d58432c04cc0ea439a41c34ddd6cf7606470f69286216ac06503f3e0',
+      weight: 3
+    },
+    {
+      accountHash: 'account-hash-73d68303dfc3d43a8c9ec04704ff85b2ddc167b62a6d073bc0b2a8787ef4b1bc',
+      weight: 1
+    },
+    {
+      accountHash: 'account-hash-c4f07b3a5489486df5db9d4aa29416c56b1e864bbe69b6c57c6f2c3d60ef7784',
+      weight: 1
+    }
+  ],
+  actionThresholds: { deployment: 2, keyManagement: 3 }
+}
+```
