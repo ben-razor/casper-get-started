@@ -38,7 +38,7 @@ npm run start:atomic
 ```
 
 As part of its operation, the Keys Manager deploys the contract that was created earlier with:
-```
+```JavaScript
    console.log("\n[x] Install Keys Manager contract");
     let deploy = keyManager.keys.buildContractInstallDeploy(mainAccount);
     await keyManager.sendDeploy(deploy, [mainAccount]);
