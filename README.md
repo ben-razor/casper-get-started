@@ -13,3 +13,7 @@ This repository documents following [Get started with Casper](https://gitcoin.co
 ### 3. Modify the client in the Multi-Sig tutorial
 
 [Modify client in the Multi-Sig Tutorial](https://github.com/ben-razor/casper-get-started/tree/main/3-multi-signature)
+
+### 4. Transfer tokens to an account on the Casper Testnet
+
+[Transfer tokens to an account on the Casper Testnet](https://github.com/ben-razor/casper-get-started/tree/main/4-transfer-tokens)
