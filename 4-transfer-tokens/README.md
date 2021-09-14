@@ -25,7 +25,7 @@ casper-client get-balance --node-address http://localhost:11101 \
   --purse-uref uref-261ec7b1b7206934e34611ce798454b17e62b39f5bf01796dd5d64288a75611c-00 \
   --state-root-hash 40022f45343854a6e3956bcd71d8aaf92e77f69346394a3389186c3fd04b9594
 ```
-The balance for the faucet account is 1000000000000000000000000000000000.
+The balance for the faucet account is **1000000000000000000000000000000000**.
 
 To find other accounts:
 
@@ -37,7 +37,7 @@ casper-client get-balance --node-address http://localhost:11101 \
   --state-root-hash 40022f45343854a6e3956bcd71d8aaf92e77f69346394a3389186c3fd04b9594
 ```
 
-This account has a balance of 1000000000000000000000000000000000.
+The second account has a balance of **1000000000000000000000000000000000**.
 
 ### Making The Transfer
 
@@ -77,15 +77,13 @@ casper-client get-balance --node-address http://localhost:11101 \
   --state-root-hash 46f21a364ad9cdab20e831e9963d0a9ebe788372c541840b451a5f2ac090e946
 ```
 ### Transfer Completed
-The balance for the second account is now:
-```
-"balance_value": "1000000000000000000000250000000000"
-```
+The balance for the second account is now **1000000000000000000000250000000000**, showing that the transfer has been added.
 
 ### Querying Transaction State
 We use get-deploy with returned deploy_hash to query the state of the transaction:
 ```
-casper-client get-deploy --node-address http://localhost:11101 af19e964025d42a86480738dfd4665c5adef0a4fcc1a06916ffef75175d0714c
+casper-client get-deploy \
+  --node-address http://localhost:11101 af19e964025d42a86480738dfd4665c5adef0a4fcc1a06916ffef75175d0714c
 ```
 We use the information returned to gather the important information from the transaction:
 ```
@@ -95,3 +93,17 @@ transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
 # "result"."execution_results"[0]."block_hash"
 528e275ea3fd2410fb2e7ab860739bdec57e26e638e0f6e46e9cb19a7f797776
 ```
+### Querying Block State
+We get the block information using:
+```
+casper-client get-block --node-address http://localhost:11101 --block-identifier 528e275ea3fd2410fb2e7ab860739bdec57e26e638e0f6e46e9cb19a7f797776
+```
+### Querying Source Account
+We have already queried the destination account. But for completeness we query the source account to make sure the transaction has completed on both sides:
+```
+casper-client query-state --node-address http://localhost:11101 --key 0132263f5134d3d69026ec4575fecca26ba362266acfbb979cfc2c536bafa34a6e --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8
+
+casper-client get-balance --node-address http://localhost:11101 --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 --purse-uref uref-261ec7b1b7206934e34611ce798454b17e62b39f5bf01796dd5d64288a75611c-00
+```
+
+The balance for the faucet account is now **999999999999999999999749999990000** Showing that the funds and fees have been removed from the source account.
