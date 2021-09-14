@@ -33,3 +33,34 @@ nctl-compile
 nctl-assets-setup && nctl-start
 ```
 
+### 4. Install casper-client
+
+Using the commands from [Casper Client Setup](https://docs.casperlabs.io/en/latest/dapp-dev-guide/tutorials/counter/setup.html)
+
+```
+rustup toolchain install nightly
+cargo +nightly-2021-06-17 install casper-client
+```
+
+Produced the error:
+
+```
+Installing casper-client v1.3.2
+...
+ failed to select a version for `snow`.
+      ... required by package `libp2p-noise v0.29.0`
+      ... which is depended on by `libp2p v0.35.1`
+      ... which is depended on by `casper-node v1.3.2`
+      ... which is depended on by `casper-client v1.3.2`
+  versions that meet the requirements `^0.7.1` are: 0.7.2, 0.7.1
+
+```
+
+The following commands fixed the problem:
+
+```
+rustup toolchain install nightly-2021-06-17
+cargo +nightly-2021-06-17 install casper-client --locked
+```
+
+Now we can use casper-client to interact with the local node.
