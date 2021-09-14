@@ -4,6 +4,22 @@ Step 5 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 > Learn to Delegate and Undelegate on the Casper Testnet..
 
-Screenshots from during the task are included at the bottom of this document.
+### Testnet Delegation Screenshots
 
-### Transfer Accounts
+#### Get CSPR From Faucet
+![4-faucet-start](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/4-faucet-start.png)
+
+#### Start Delegation Process
+![5-delegate-start](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/5-delegate-start.png)
+
+#### Select Staker For Delegation
+![6-delegation-details.png](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/6-delegation-details.png)
+
+#### Confirm Delegation
+![7-confirm-delegation.png](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/7-confirm-delegation.png)
+
+#### Sign Delegation
+![8-delegate-sign.png](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/8-delegate-sign.png)
+
+#### Delegation Confirmed
+![9-delegate-complete.png](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/9-delegate-complete.png)
