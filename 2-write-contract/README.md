@@ -67,8 +67,14 @@ Now we can use casper-client to interact with the local node.
 
 ### Account / Node Configuration
 
-An account is needed to interact with the contracts. Details for a local test account are produced by **nctl-view-faucet-account**
+An account is needed to interact with the contracts. Details for a local test account are produced by running the following commands in the root of the local node:
 
+```
+source env/bin/activate
+source casper-node/utils/nctl/activate
+nctl-view-faucet-account
+```
+These commands produced the following test account information:
 ```
 Account hash: account-hash-18095494c7d5169d4ee8dbd72da1dad1a5d296587ae20fe7848a9032ae7d43d0
 Secret key: casper-node/utils/nctl/assets/net-1/faucet/secret_key.pem
