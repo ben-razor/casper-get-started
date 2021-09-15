@@ -22,7 +22,9 @@ Install cargo-casper this will be used to create a simple contract, a runtime en
 
 Got the following error:
 ```bash
-error: component download failed for rustc-x86_64-unknown-linux-gnu: could not rename downloaded file from '/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161.partial' to '/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161'
+error: component download failed for rustc-x86_64-unknown-linux-gnu: could not rename downloaded file from 
+'/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161.partial' to 
+'/home/chrisb/.rustup/downloads/0ed6cf75177b00994224590434859bc05f13890dba51d18f97456b4a9fa32161'
 ```
 Needed to do:
 ```rustup component add cargo```
