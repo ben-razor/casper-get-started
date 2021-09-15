@@ -176,8 +176,8 @@ After getting a new **state-root-hash** and rerunning **query-state**. The CLVal
 #### Deploy Counter Contract
 ![Deploy Counter Contract](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/7-contract-deploy.png)
 
-#### Before Counter Increment
+#### Before Counter Increments
 ![Before Counter Increment](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/8-before-counter.png)
 
-#### After Counter Increment
+#### After Counter Increments
 ![After Counter Increment](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/9-after-counter.png)
