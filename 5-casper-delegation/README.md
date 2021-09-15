@@ -25,3 +25,20 @@ View the delegation history on the [Testnet Account](https://testnet.cspr.live/a
 
 #### Delegation Confirmed
 ![9-delegate-complete.png](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/9-delegate-complete.png)
+
+### Undelegation Screenshots
+
+#### Undelegate Start
+![Undelegate Start](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/11-undelegate-start.png)
+
+#### Undelegate Confirm
+![Undelegate Confirm](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/12-confirm-undelegate.png)
+
+#### Undelegate Sign
+![Undelegate Sign](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/13-sign-undelegate.png)
+
+#### Undelegate Complete
+![Undelegate Complete](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/14-undelegation-completed.png)
+
+#### State Of Account After Delegate / Undelegate
+![State Of Account](https://github.com/ben-razor/casper-get-started/blob/main/5-casper-delegation/img-task-5/15-post-undelegate.png)
