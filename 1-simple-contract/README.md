@@ -46,6 +46,7 @@ Updated Cargo to use 1.3.2 instead.
 ![Cargo build complete](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/13-cargo-build-complete.png)
 
 ### 7. Test the contract
+Run **cargo test** to test the contract.
 ```
 error: failed to select a version for the requirement casper-contract = "^1.3.3"
 error: failed to select a version for the requirement casper-engine-test-support = "^1.3.3"
