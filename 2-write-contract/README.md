@@ -10,9 +10,7 @@ Screenshots from during the task are included at the bottom of this document.
 
 ### 1. Introduction
 
-For local development we will use a faucet account to deploy contracts.
-
-> This command supplies two key pieces of information: the account’s secret key location and the account hash, which are used to sign deploys and query the network state, respectively.
+For local development we will use a faucet test account to deploy contracts.
 
 **casper-client** interacts with the network. a *State Root Hash* shows the current state of the network and helps us check if updates have been made. **casper-client query-state** allows the state of network to be viewed at any time. **casper-client put-deploy** deploys wasm contracts to the network. **casper-client get-deploy** gets the details for a deployed contract.
 
