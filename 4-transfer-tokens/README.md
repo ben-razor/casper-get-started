@@ -118,7 +118,9 @@ The balance for the faucet account is now **999999999999999999999749999990000** 
 ### Full Transaction Details
 To polish things off we use the following command to retrieve the full transaction information:
 ```
-casper-client query-state --node-address http://localhost:11101  --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 --key transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
+casper-client query-state --node-address http://localhost:11101 \
+  --state-root-hash d796f89349c05d1dbb014c7845c86300db14d8743e014b96e3cbc2d7f09bbbd8 \
+  --key transfer-54d78315d0458409f657e855a8c25381eaac03881dce9ac0c3e03907ff809e81
 ```
 Giving the transaction details:
 ```
