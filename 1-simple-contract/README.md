@@ -81,9 +81,9 @@ It looks like target/wasm32-unknown-unknown should be copied under the tests fol
 
 I'll try manually copying the wasm32-unknown-unknown out of release into tests.
 
-I realised the error was that I had come out of the contract directory and gone into the tests directory and was running cargo test from there.
+I realised the error was that I had come out of the **contract** directory and gone into the **tests** directory and was running **cargo test** from there.
 
-I changed to the contract directory and ran cargo test and now the tests pass.
+I changed to the **contract** directory and ran **cargo test** and now the tests pass.
 
 ### 9. Tests Passing
 
