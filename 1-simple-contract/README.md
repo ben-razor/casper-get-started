@@ -46,22 +46,23 @@ Updated Cargo to use 1.3.2 instead.
 ![Cargo build complete](https://github.com/ben-razor/casper-get-started/blob/main/1-simple-contract/img/13-cargo-build-complete.png)
 
 ### 7. Test the contract
-
-error: failed to select a version for the requirement `casper-contract = "^1.3.3"`
-error: failed to select a version for the requirement `casper-engine-test-support = "^1.3.3"`
-
-Updated Cargo to use 1.3.2 to solve these two issues.
+```
+error: failed to select a version for the requirement casper-contract = "^1.3.3"
+error: failed to select a version for the requirement casper-engine-test-support = "^1.3.3"
+```
+Updated Cargo to use version 1.3.2 to solve these two issues.
 
 Then got errors:
-
-failures:
-
+```
 ---- tests::should_store_hello_world stdout ----
-thread 'tests::should_store_hello_world' panicked at 'Rust Wasm path /home/chrisb/.cargo/registry/src/target/wasm32-unknown-unknown/release does not exists', /home/chrisb/.cargo/registry/src/github.com-1ecc6299db9ec823/casper-engine-test-support-1.3.2/src/internal/utils.rs:49:5
+thread 'tests::should_store_hello_world' panicked at 'Rust Wasm path 
+/home/chrisb/.cargo/registry/src/target/wasm32-unknown-unknown/release does not exists', 
+/home/chrisb/.cargo/registry/src/github.com-1ecc6299db9ec823/casper-engine-test-support-1.3.2/src/internal/utils.rs:49:5
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 ---- tests::should_error_on_missing_runtime_arg stdout ----
-thread 'tests::should_error_on_missing_runtime_arg' panicked at 'Lazy instance has previously been poisoned', /home/chrisb/.cargo/registry/src/github.com-1ecc6299db9ec823/once_cell-1.8.0/src/lib.rs:1116:25
+thread 'tests::should_error_on_missing_runtime_arg' panicked at 'Lazy instance has previously been poisoned', 
+/home/chrisb/.cargo/registry/src/github.com-1ecc6299db9ec823/once_cell-1.8.0/src/lib.rs:1116:25
 note: panic did not contain expected string
       panic message: `"Lazy instance has previously been poisoned"`,
  expected substring: `"ApiError::MissingArgument"`
@@ -71,6 +72,7 @@ failures:
     tests::should_store_hello_world
 
 test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+```
 
 ### 8. Diagnosis of errors
 
