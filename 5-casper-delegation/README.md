@@ -2,7 +2,9 @@
 
 Step 5 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitcoin-hackathon/29/100026611) from the Casper Hackathon.
 
-> Learn to Delegate and Undelegate on the Casper Testnet..
+> Learn to Delegate and Undelegate on the Casper Testnet
+
+[Testnet Account](https://testnet.cspr.live/account/0103838821cdc349eae9423b128984add297653b866b00d7d196b5650ce32740a5)
 
 ### Testnet Delegation Screenshots
 
