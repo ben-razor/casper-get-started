@@ -4,7 +4,7 @@ Step 5 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 > Learn to Delegate and Undelegate on the Casper Testnet
 
-[Testnet Account](https://testnet.cspr.live/account/0103838821cdc349eae9423b128984add297653b866b00d7d196b5650ce32740a5)
+View the [Testnet Account](https://testnet.cspr.live/account/0103838821cdc349eae9423b128984add297653b866b00d7d196b5650ce32740a5) that staked.
 
 ### Testnet Delegation Screenshots
 
