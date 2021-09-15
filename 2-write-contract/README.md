@@ -6,6 +6,8 @@ Step 2 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitc
 
 We document following the tutorial for creating a [Counter Contract](https://docs.casperlabs.io/en/latest/dapp-dev-guide/tutorials/counter).
 
+Screenshots from during the task are included at the bottom of this document.
+
 ### 1. Introduction
 
 For local development we will use a faucet account to deploy contracts.
@@ -164,3 +166,20 @@ Gave the deploy_hash:
 270cf989db8884ff1012635c55c879f9311edb46a612b8f91ea5baebb4603d17
 ```
 After getting a new **state-root-hash** and rerunning **query-state**. The CLValue has incremented by the deployment of this new contract.
+
+### Task Screenshots
+
+#### nctl Start
+![Start Nodes](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/4-nctl-start.png)
+
+#### Counter Tests Passing
+![Counter Tests Passing](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/6-counter-tests-passing.png)
+
+#### Deploy Counter Contract
+![Deploy Counter Contract](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/7-contract-deploy.png)
+
+#### Before Counter Increment
+![Before Counter Increment](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/8-before-counter.png)
+
+#### After Counter Increment
+![After Counter Increment](https://github.com/ben-razor/casper-get-started/blob/main/2-write-contract/img-task-2/9-after-counter.png)
