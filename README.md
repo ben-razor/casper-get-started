@@ -20,4 +20,4 @@ This repository documents following [Get started with Casper](https://gitcoin.co
 
 ### 5. Casper Delegation
 
-[Learn to Delegate and Undelegate on the Casper Testnet.](https://github.com/ben-razor/casper-get-started/tree/main/5-casper-delegation)
+[Learn to Delegate and Undelegate on the Casper Testnet](https://github.com/ben-razor/casper-get-started/tree/main/5-casper-delegation)
