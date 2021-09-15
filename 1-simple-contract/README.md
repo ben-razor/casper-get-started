@@ -1,4 +1,4 @@
-# casper-get-started
+# Create And Deploy A Casper Contract
 
 Step 1 of [Get started with Casper](https://gitcoin.co/issue/casper-network/gitcoin-hackathon/29/100026611) from the Casper Hackathon.
 
